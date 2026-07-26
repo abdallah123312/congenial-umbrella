@@ -4,8 +4,8 @@
   "description": "منصة الأبطال - مع عبدالله أسامة",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#F3EEE2",
-  "theme_color": "#161F2B",
+  "background_color": "#F6F4FB",
+  "theme_color": "#1E1B4B",
   "orientation": "portrait",
   "icons": [
     { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },

@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Play, Lock, Unlock, Shield, X, Loader2, BookOpen, ChevronDown, Search, Sparkles, Video, User, Phone, KeyRound, LogOut, Facebook, MessageCircle, CheckCircle2, Circle, ClipboardCheck, Award, Bell } from "lucide-react";
+import { Play, Lock, Unlock, X, Loader2, BookOpen, ChevronDown, Search, Sparkles, Video, User, Phone, KeyRound, LogOut, Facebook, MessageCircle, CheckCircle2, Circle, ClipboardCheck, Award, Bell } from "lucide-react";
 import { dbGet, dbSet, normalizeSubjects } from "./storage";
 import { GRADES } from "./grades";
 import { requestNotificationPermission } from "./onesignal";
 import { registerStudent, loginStudent, logout as authLogout, onAuthChange } from "./auth";
 
 const COLORS = {
-  ink: "#161F2B", inkDeep: "#0E1520", paper: "#F3EEE2", card: "#FFFFFF",
-  line: "#E4DCC8", red: "#D8432E", redDark: "#A62E1D", redSoft: "#F7DCD5",
-  gold: "#E7B23A", goldSoft: "#FBEBC4", teal: "#2F8F7C", tealSoft: "#D9F0EA",
-  muted: "#8B8577",
+  ink: "#1E1B4B", inkDeep: "#14123A", paper: "#F6F4FB", card: "#FFFFFF",
+  line: "#E3DFF2", red: "#7C3AED", redDark: "#5B21B6", redSoft: "#EDE4FB",
+  gold: "#F59E0B", goldSoft: "#FEF3C7", teal: "#0D9488", tealSoft: "#CCFBF1",
+  muted: "#6B7280",
 };
 
 const CONTENT_KEY = "alabtal_content";
@@ -236,11 +236,8 @@ export default function StudentApp() {
     return (
       <div dir="rtl" style={{ minHeight: "100vh", background: COLORS.paper, fontFamily: "'Tajawal', sans-serif" }}>
         <div style={{ background: `linear-gradient(135deg, ${COLORS.ink}, ${COLORS.inkDeep})`, padding: "30px 16px 40px", position: "relative", overflow: "hidden" }}>
-          <Shield style={{ position: "absolute", left: -10, top: -18, opacity: 0.08, transform: "rotate(-12deg)" }} size={140} color="#fff" />
           <div className="flex items-center gap-3" style={{ maxWidth: 760, margin: "0 auto", position: "relative" }}>
-            <div className="flex items-center justify-center" style={{ width: 50, height: 50, borderRadius: 14, background: COLORS.red }}>
-              <Shield size={24} color="#fff" />
-            </div>
+            <img src="/teacher-banner.png" alt={TEACHER_NAME} style={{ width: 50, height: 50, borderRadius: 14, objectFit: "cover", border: "2px solid rgba(255,255,255,0.25)" }} />
             <div>
               <h1 style={{ fontWeight: 900, fontSize: 24, color: "#fff" }}>منصة {PLATFORM_NAME}</h1>
               <p style={{ fontSize: 12.5, color: "#B9C2CE" }}>مع {TEACHER_NAME}</p>
@@ -323,11 +320,8 @@ export default function StudentApp() {
         @media (prefers-reduced-motion: reduce) { .portal-open { animation: none; } }
       `}</style>
       <div style={{ background: `linear-gradient(135deg, ${COLORS.ink}, ${COLORS.inkDeep})`, padding: "30px 16px 40px", position: "relative", overflow: "hidden" }}>
-        <Shield style={{ position: "absolute", left: -10, top: -18, opacity: 0.08, transform: "rotate(-12deg)" }} size={140} color="#fff" />
         <div className="flex items-center gap-3" style={{ maxWidth: 760, margin: "0 auto", position: "relative" }}>
-          <div className="flex items-center justify-center" style={{ width: 50, height: 50, borderRadius: 14, background: COLORS.red }}>
-            <Shield size={24} color="#fff" />
-          </div>
+          <img src="/teacher-banner.png" alt={TEACHER_NAME} style={{ width: 50, height: 50, borderRadius: 14, objectFit: "cover", border: "2px solid rgba(255,255,255,0.25)" }} />
           <div>
             <h1 style={{ fontWeight: 900, fontSize: 24, color: "#fff" }}>منصة {PLATFORM_NAME}</h1>
             <p style={{ fontSize: 12.5, color: "#B9C2CE" }}>مع {TEACHER_NAME}</p>

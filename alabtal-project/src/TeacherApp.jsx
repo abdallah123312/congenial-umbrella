@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import {
-  Plus, Trash2, Shield, X, Loader2, BookOpen, ChevronDown,
+  Plus, Trash2, X, Loader2, BookOpen, ChevronDown,
   LogOut, Sparkles, Video, KeyRound, Check, Users, Phone, ClipboardCheck,
   Image as ImageIcon, Upload,
 } from "lucide-react";
@@ -10,15 +10,16 @@ import { sendNewContentNotification } from "./onesignal";
 import { loginTeacher, registerTeacher, logout as authLogout, onAuthChange } from "./auth";
 
 const COLORS = {
-  ink: "#161F2B", inkDeep: "#0E1520", paper: "#F3EEE2", card: "#FFFFFF",
-  line: "#E4DCC8", red: "#D8432E", redDark: "#A62E1D", redSoft: "#F7DCD5",
-  gold: "#E7B23A", goldSoft: "#FBEBC4", teal: "#2F8F7C", tealSoft: "#D9F0EA",
-  muted: "#8B8577",
+  ink: "#1E1B4B", inkDeep: "#14123A", paper: "#F6F4FB", card: "#FFFFFF",
+  line: "#E3DFF2", red: "#7C3AED", redDark: "#5B21B6", redSoft: "#EDE4FB",
+  gold: "#F59E0B", goldSoft: "#FEF3C7", teal: "#0D9488", tealSoft: "#CCFBF1",
+  muted: "#6B7280",
 };
 
 const CONTENT_KEY = "alabtal_content";
 const STUDENTS_KEY = "alabtal_students";
 const QUIZ_RESULTS_KEY = "alabtal_quiz_results";
+const CODE_REDEMPTIONS_KEY = "alabtal_code_redemptions";
 const TEACHER_NAME = "عبدالله أسامة";
 const PLATFORM_NAME = "الأبطال";
 
@@ -265,9 +266,7 @@ export default function TeacherApp() {
         <div className="flex items-center justify-center px-6" style={{ minHeight: "100vh" }}>
           <div className="w-full" style={{ maxWidth: 380 }}>
             <div className="flex items-center justify-center" style={{ marginBottom: 18 }}>
-              <div className="flex items-center justify-center" style={{ width: 64, height: 64, borderRadius: 18, background: `linear-gradient(135deg, ${COLORS.ink}, ${COLORS.inkDeep})`, boxShadow: "0 10px 24px rgba(22,31,43,0.25)" }}>
-                <Shield size={28} color={COLORS.gold} />
-              </div>
+              <img src="/teacher-banner.png" alt={TEACHER_NAME} style={{ width: 72, height: 72, borderRadius: 18, objectFit: "cover", boxShadow: "0 10px 24px rgba(30,27,75,0.25)" }} />
             </div>
             <h1 className="text-center" style={{ fontWeight: 900, fontSize: 27, color: COLORS.ink, marginBottom: 4 }}>لوحة {PLATFORM_NAME}</h1>
             <p className="text-center" style={{ color: COLORS.muted, fontSize: 13.5, marginBottom: 26 }}>دخول {TEACHER_NAME} — إدارة المواد والمحاضرات</p>
@@ -322,9 +321,7 @@ export default function TeacherApp() {
           <div style={{ background: `linear-gradient(135deg, ${COLORS.ink}, ${COLORS.inkDeep})`, padding: "26px 16px 30px" }}>
             <div className="flex items-center justify-between" style={{ maxWidth: 760, margin: "0 auto" }}>
               <div className="flex items-center gap-3">
-                <div className="flex items-center justify-center" style={{ width: 46, height: 46, borderRadius: 13, background: COLORS.red }}>
-                  <Shield size={22} color="#fff" />
-                </div>
+                <img src="/teacher-banner.png" alt={TEACHER_NAME} style={{ width: 46, height: 46, borderRadius: 13, objectFit: "cover", border: "2px solid rgba(255,255,255,0.25)" }} />
                 <div>
                   <h1 style={{ fontWeight: 900, fontSize: 21, color: "#fff" }}>لوحة تحكم {PLATFORM_NAME}</h1>
                   <p style={{ fontSize: 12, color: "#B9C2CE" }}>{TEACHER_NAME}</p>
