@@ -201,14 +201,15 @@ export default function StudentApp() {
   if (!entered) {
     return (
       <div dir="rtl" style={{ minHeight: "100vh", background: COLORS.paper, fontFamily: "'Tajawal', sans-serif", display: "flex", flexDirection: "column" }}>
-        <div style={{ background: `linear-gradient(135deg, ${COLORS.ink}, ${COLORS.inkDeep})`, padding: "50px 20px 60px", position: "relative", overflow: "hidden", flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center" }}>
+        <div style={{ background: `linear-gradient(135deg, ${COLORS.ink}, ${COLORS.inkDeep})`, padding: "30px 20px 40px", position: "relative", overflow: "hidden", flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center" }}>
           <div style={{ position: "absolute", inset: 0, opacity: 0.05, backgroundImage: `repeating-linear-gradient(45deg, #fff 0 2px, transparent 2px 40px)` }} />
-          <div className="flex items-center justify-center" style={{ width: 84, height: 84, borderRadius: 22, background: COLORS.red, boxShadow: "0 12px 30px rgba(216,67,46,0.35)", marginBottom: 22, position: "relative" }}>
-            <Shield size={40} color="#fff" />
-          </div>
-          <h1 style={{ fontWeight: 900, fontSize: 30, color: "#fff", marginBottom: 8, position: "relative" }}>منصة {PLATFORM_NAME}</h1>
-          <p style={{ fontSize: 15, color: "#C8D0DA", marginBottom: 6, position: "relative" }}>مع {TEACHER_NAME}</p>
-          <p style={{ fontSize: 13, color: "#8B95A3", maxWidth: 320, lineHeight: 1.8, marginBottom: 30, position: "relative" }}>
+          <img
+            src="/teacher-banner.png"
+            alt={TEACHER_NAME}
+            style={{ width: "100%", maxWidth: 340, borderRadius: 18, boxShadow: "0 16px 40px rgba(0,0,0,0.35)", marginBottom: 20, position: "relative" }}
+          />
+          <h1 style={{ fontWeight: 900, fontSize: 26, color: "#fff", marginBottom: 8, position: "relative" }}>منصة {PLATFORM_NAME}</h1>
+          <p style={{ fontSize: 13, color: "#8B95A3", maxWidth: 320, lineHeight: 1.8, marginBottom: 26, position: "relative" }}>
             محاضراتك كلها في مكان واحد — سجل حسابك وابدأ رحلتك مع الأبطال.
           </p>
           <button

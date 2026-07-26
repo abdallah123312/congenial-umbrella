@@ -2,20 +2,20 @@
   "rules": {
     "alabtal_content": {
       ".read": "auth != null",
-      ".write": "auth != null && auth.uid === 'ADMIN_UID_HERE'"
+      ".write": "auth != null && auth.uid === 'w517eKCoEdQveAspAn8gMl81QJq2'"
     },
     "alabtal_students": {
-      ".read": "auth != null && auth.uid === 'ADMIN_UID_HERE'",
+      ".read": "auth != null && auth.uid === 'w517eKCoEdQveAspAn8gMl81QJq2'",
       "$uid": {
-        ".read": "auth != null && (auth.uid === $uid || auth.uid === 'ADMIN_UID_HERE')",
-        ".write": "auth != null && (auth.uid === $uid || auth.uid === 'ADMIN_UID_HERE')"
+        ".read": "auth != null && (auth.uid === $uid || auth.uid === 'w517eKCoEdQveAspAn8gMl81QJq2')",
+        ".write": "auth != null && (auth.uid === $uid || auth.uid === 'w517eKCoEdQveAspAn8gMl81QJq2')"
       }
     },
     "alabtal_quiz_results": {
-      ".read": "auth != null && auth.uid === 'ADMIN_UID_HERE'",
+      ".read": "auth != null && auth.uid === 'w517eKCoEdQveAspAn8gMl81QJq2'",
       "$lectureId": {
         "$uid": {
-          ".write": "auth != null && (auth.uid === $uid || auth.uid === 'ADMIN_UID_HERE')"
+          ".write": "auth != null && (auth.uid === $uid || auth.uid === 'w517eKCoEdQveAspAn8gMl81QJq2')"
         }
       }
     }
