@@ -1,0 +1,23 @@
+{
+  "rules": {
+    "alabtal_content": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.uid === 'ADMIN_UID_HERE'"
+    },
+    "alabtal_students": {
+      ".read": "auth != null && auth.uid === 'ADMIN_UID_HERE'",
+      "$uid": {
+        ".read": "auth != null && (auth.uid === $uid || auth.uid === 'ADMIN_UID_HERE')",
+        ".write": "auth != null && (auth.uid === $uid || auth.uid === 'ADMIN_UID_HERE')"
+      }
+    },
+    "alabtal_quiz_results": {
+      ".read": "auth != null && auth.uid === 'ADMIN_UID_HERE'",
+      "$lectureId": {
+        "$uid": {
+          ".write": "auth != null && (auth.uid === $uid || auth.uid === 'ADMIN_UID_HERE')"
+        }
+      }
+    }
+  }
+}
