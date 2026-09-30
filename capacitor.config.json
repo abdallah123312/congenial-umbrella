@@ -1,0 +1,9 @@
+{
+  "appId": "com.alabtal.platform",
+  "appName": "الأبطال",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}

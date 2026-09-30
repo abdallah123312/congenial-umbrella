@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>منصة الأبطال</title>
+    <meta name="theme-color" content="#1E1B4B" />
+    <meta name="description" content="منصة الأبطال - مع عبدالله أسامة" />
+
+    <!-- Open Graph / معاينة الروابط في واتساب وفيسبوك -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="منصة الأبطال - مع عبدالله أسامة" />
+    <meta property="og:description" content="محاضراتك كلها في مكان واحد — انضم للأبطال." />
+    <meta property="og:image" content="https://alabtal-project-3.vercel.app/teacher-banner.png" />
+    <meta property="og:url" content="https://alabtal-project-3.vercel.app" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="منصة الأبطال - مع عبدالله أسامة" />
+    <meta name="twitter:description" content="محاضراتك كلها في مكان واحد — انضم للأبطال." />
+    <meta name="twitter:image" content="https://alabtal-project-3.vercel.app/teacher-banner.png" />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="الأبطال" />
+
+    <!-- Tailwind (CDN, no build step needed) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- OneSignal (إشعارات) — استبدل ONESIGNAL_APP_ID_HERE بالـ App ID من حسابك (شرح في README.md) -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(async function (OneSignal) {
+        await OneSignal.init({
+          appId: "ONESIGNAL_APP_ID_HERE",
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

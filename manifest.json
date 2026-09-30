@@ -1,0 +1,14 @@
+{
+  "name": "منصة الأبطال",
+  "short_name": "الأبطال",
+  "description": "منصة الأبطال - مع عبدالله أسامة",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F6F4FB",
+  "theme_color": "#1E1B4B",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
